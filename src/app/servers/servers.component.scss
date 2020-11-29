@@ -1,3 +1,10 @@
 :host {
   display: block;
+
+  .container {
+    margin: 1rem;
+    padding: 1rem;
+    text-align: left;
+    background: rgba(0,0,0,0.5);
+  }
 }
