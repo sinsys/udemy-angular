@@ -18,10 +18,15 @@
   </button>
 </div>
 
+<ng-template #noServer>
+  <p>No server was created</p>
+</ng-template>
+
 <div class="container">
   <p>{{ serverName }}</p>
   <p [innerText]="allowNewServer"></p>
-  <p>{{ serverCreationStatus }}</p>
+  <p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
+
   <app-server></app-server>
   <app-server></app-server>
 </div>
